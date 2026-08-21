@@ -94,6 +94,7 @@
         const btn = document.createElement('button');
         btn.className = 'cell';
         btn.dataset.index = i;
+        btn.setAttribute('aria-label', `Square ${i + 1}, empty`);
         btn.addEventListener('click', onCellClick);
         boardEl.appendChild(btn);
       }
@@ -113,6 +114,7 @@
         cell.classList.toggle('filled', !!board[i]);
         cell.classList.toggle('locked', over);
         cell.classList.remove('winning');
+        cell.setAttribute('aria-label', board[i] ? `Square ${i + 1}, ${board[i]}` : `Square ${i + 1}, empty`);
       });
       if (winnerInfo) {
         winnerInfo.line.forEach((i) => boardEl.children[i].classList.add('winning'));

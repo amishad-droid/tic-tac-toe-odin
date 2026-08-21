@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Scorepad — Tic-Tac-Toe</title>
+<meta name="description" content="A notebook styled Tic-Tac-Toe game with an unbeatable minimax AI opponent and two player mode. Built with vanilla JavaScript.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Special+Elite&display=swap" rel="stylesheet">
@@ -32,7 +33,7 @@
           <path d="M 8 101 C 100 99, 200 103, 292 100"></path>
           <path d="M 6 201 C 100 203, 200 198, 294 200"></path>
         </svg>
-        <div class="cells" id="board"></div>
+        <div class="cells" id="board" role="group" aria-label="Tic-tac-toe board"></div>
       </div>
     </div>
 
@@ -62,7 +63,7 @@
         </div>
       </div>
 
-      <button class="reset" id="resetBtn">tear off, new round</button>
+      <button class="reset" id="resetBtn" aria-label="Start a new round">tear off, new round</button>
     </div>
   </div>
 
